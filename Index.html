@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>JavaScript Assignment 2</title>
+    <script src="script.js" type="text/javascript"></script>
+    <style>
+        div.form {
+            margin-top: 50px;
+            width: 25%;
+            float: left;
+        }
+        input[type="submit"]{
+            width: 100%;
+        }
+        form {
+            border: 1px solid black;
+            padding: 5px 5px 5px 5px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        div.tableDiv {
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+</head>
+
+<body>
+    <div class="form">
+        <h3>Data Entry Table</h1>
+            <form name="employeeForm" id="employeeForm" onsubmit="return ValidateForm()">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">Name</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name" placeholder="Please enter Full Name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                        </td>
+                        <td>
+                            <input type="text" name="email" id="email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mobile">Mobile No</label>
+                        </td>
+                        <td>
+                            <input type="text" name="mobile" id="mobile" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <br />
+                            <input type="submit" value="submit"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+    </div>
+    <div class="tableDiv">
+        <h3>Table showing data from local storage</h1>
+            <div class="container">
+                <table id="bootstrapTable" class="table table-striped w-auto">
+                    <thead>
+                        <tr>
+                            <th data-field="name">Name</th>
+                            <th data-field="email">Email</th>
+                            <th data-field="mobile">Mobile No</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+    </div>
+    <div>
+</body>
+</html>
